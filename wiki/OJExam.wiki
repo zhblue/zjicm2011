@@ -2,14 +2,14 @@
 
 陈强
 
-[OJExam_SystemDesign]
+[OJExam_SystemDesign 系统设计]
 
-[OJExam_TechBase]
+[OJExam_TechBase 技术基础]
 
-[OJExam_CodeAvailable]
+[OJExam_CodeAvailable 可用代码]
 
-[OJExam_DevelopingPlan]
+[OJExam_DevelopingPlan 开发计划]
 
-[OJExam_JudgedSystem]
+[OJExam_JudgedSystem 判题服务器]
 
-[OJExam_JOLDatabase]
+[OJExam_JOLDatabase OJ数据库]
