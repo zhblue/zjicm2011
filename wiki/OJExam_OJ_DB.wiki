@@ -23,7 +23,7 @@ _i'italic?_
 verbatim code block
 }}}
 ==wiki links==
-[http://zjicm2011.googlecode.com/johnnychen johnnychen]
+[johnnychen]
 ==table cells==
 ||table?||cells?||
 http://zjicm2011.googlecode.com/files/jol_db.jpg
