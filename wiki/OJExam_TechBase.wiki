@@ -1,13 +1,10 @@
 #summary One-sentence summary of this page.
 
-= Introduction =
+== 技术罗列==
 
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+ * 服务器采用MYSQL
+ * WEB服务器程序采用PHP语言
+  * 利用了wordpress开源框架
+  * HUSTOJ源代码
+ * 客服端采用HTML/CSS/JAVASCRIPT的经典组合
+ * 其他：AJAX、FLEX等其他RIA技术
