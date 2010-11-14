@@ -3,7 +3,7 @@
  # [VoicePic]  电脑语音早教系统 [Flash+php]      尹朝欢
  # [StockTracker]  金融证券行情跟踪系统 [java]         王和舰
 
-gmail账号登陆，点击问号，编写自己的系统框架、技术基础（现成代码资源）、开发计划。
+gmail账号登陆，点击问号，编写自己的系统框架(SystemDesign)、技术基础(Tech)、现成代码资源(CodeAvailable)、开发计划(DevelopingPlan)。
 注意用题目做前缀 如：
 {{{
    OJExam_SystemDesign
