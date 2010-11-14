@@ -1,9 +1,12 @@
 #summary One-sentence summary of this page.
 #labels Phase-Requirements
 
-= Introduction =
+= 开发流程=
 
-Add your content here.
+ #把jol后台admin程序集成到wordpress当中
+ #在wordpress中为jol建立一套前台主题
+ #开发在线考试的功能模块
+ #将在线考试集成在一起前台主题中
 
 
 = Details =
