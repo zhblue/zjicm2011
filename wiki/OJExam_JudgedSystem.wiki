@@ -1,0 +1,23 @@
+#summary One-sentence summary of this page.
+
+= 判题系统=
+
+==组成==
+* Web操作界面：负责数据呈现与数据收集
+* Judge服务器：作为守护进程每隔一段时间检测有没有数据提交，如果有则交给judge客服换进行运算
+* Judge客户端：判题程序的核心，由Judge服务器进行调用
+
+
+==具体工作流程==
+
+# judged<-mysql
+# judged->judge_client
+# judge_client<-mysql
+# judge_client-fork->solution
+# judge_client-watch&judge
+# judge_client->mysql
+# php<-mysql
+
+===注：===
+*<- ：数据的写入或者程序的调用
+*-> ：数据的读取
