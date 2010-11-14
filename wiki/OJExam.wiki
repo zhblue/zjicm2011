@@ -12,4 +12,4 @@
 
 [OJExam_JudgedSystem]
 
-[OJExam_JOLDataBase]
+[OJExam_JOLDatabase]
