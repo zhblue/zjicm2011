@@ -1,0 +1,9 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Below is the graph which describe the jol database tables's relationship.
+It's automatically drawed by Sysbase reverse engineering.
+
+==JOL DB GRAPH(MADE BY SYSBASE)==
+http://zjicm2011.googlecode.com/files/jol_db.jpg
