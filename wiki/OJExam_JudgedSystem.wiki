@@ -3,21 +3,34 @@
 = 判题系统=
 
 ==组成==
-* Web操作界面：负责数据呈现与数据收集
-* Judge服务器：作为守护进程每隔一段时间检测有没有数据提交，如果有则交给judge客服换进行运算
-* Judge客户端：判题程序的核心，由Judge服务器进行调用
+ * Web操作界面：负责数据呈现与数据收集
+ * Judge服务器：作为守护进程每隔一段时间检测有没有数据提交，如果有则交给judge客服换进行运算
+ * Judge客户端：判题程序的核心，由Judge服务器进行调用
 
 
-==具体工作流程==
+==Judge client/server 具体工作流程==
 
-# judged<-mysql
-# judged->judge_client
-# judge_client<-mysql
-# judge_client-fork->solution
-# judge_client-watch&judge
-# judge_client->mysql
-# php<-mysql
+ # judged<-mysql
+ # judged->judge_client
+ # judge_client<-mysql
+ # judge_client-fork->solution
+ # judge_client-watch&judge
+ # judge_client->mysql
+ # php<-mysql
 
-===注：===
-*<- ：数据的写入或者程序的调用
-*-> ：数据的读取
+注：
+ *-> ：数据的写入或者程序的调用
+ *<- ：数据的读取
+解释：
+ # judged服务器轮询检测mysql中有无新数据添加
+ # 如果有数据，judged服务器调用client程序
+ # client程序自动读取mysql中新添加的数据,准备开始判题
+ # client程序的fork函数处理用户提交的solution程序？
+ # client程序的watch$judge进行最后的判断与统计？
+ # client将判题后的数据写回到mysql
+ # web客户端可以根据最新的判题结果显示界面
+=判题系统的优点=
+  *松耦合性，即web程序与判题系统的松耦合性，只要保证他们两个的中间桥梁即数据库一致即可。
+    *对此，可以很方便的进行单独的web程序开发
+    *因此，也为web迁移wordpress提供了有利的条件
+  
