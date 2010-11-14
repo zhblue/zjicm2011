@@ -2,28 +2,8 @@
 
 = Introduction =
 
-Add your content here.
+Below is the graph which describe the jol database tables's relationship.
+It's automatically drawed by Sysbase reverse engineering.
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
-
-=Testing=
-==font test==
-*I'm bold?*
-_i'italic?_
-`inline code?`
-`*`escape
-==lists test==
-{{{
-verbatim code block
-}}}
-==wiki links==
-[johnnychen]
-==table cells==
-||table?||cells?||
+==JOL DB GRAPH(MADE BY SYSBASE)==
 http://zjicm2011.googlecode.com/files/jol_db.jpg
