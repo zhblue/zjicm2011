@@ -1,0 +1,18 @@
+<a>系统框架</a>
+    <p></p>
+<a>技术基础</a>
+<ul>
+<li>数据库采用MYSQL</li>
+<li>web服务器程序采用PHP</li>
+<li>客户端采用HTML/CSS/JAVASCRIPT/JQUERY组合</li>
+</ul>
+<a>现成代码资源</a>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<a>开发计划</a>
+<ul>
+<li></li>
+<li></li>
+</ul>
