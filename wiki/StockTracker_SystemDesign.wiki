@@ -1,0 +1,13 @@
+#summary One-sentence summary of this page.
+
+= 总体设计 =
+
+利用互联网公开资源，实现可制定的证券异动提示系统.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
