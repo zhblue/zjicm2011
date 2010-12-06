@@ -1,8 +1,7 @@
 #金融证券行情跟踪系统
 = Introduction =
 
-Add your content here.
-
+系统设计
 
 = Details =
 
