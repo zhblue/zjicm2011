@@ -1,0 +1,13 @@
+#summary One-sentence summary of this page.
+
+= 数据库设计 =
+
+数据库名：StockTracer
+数据表：users、news、blogs、cases
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
