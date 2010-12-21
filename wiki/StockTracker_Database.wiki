@@ -2,7 +2,7 @@
 
 = 数据库设计 =
 
-数据库名：Financial Securities
+数据库名：StockTracer
 数据表：users、news、blogs、cases
 
 = Details =
