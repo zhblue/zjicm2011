@@ -1,0 +1,15 @@
+#summary One-sentence summary of this page.
+
+=技术基础 =
+
+数据库采用MysqL
+编程语言运用Java
+服务器运用Tomcat
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
