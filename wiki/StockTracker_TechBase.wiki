@@ -9,7 +9,4 @@
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+有关证券行情的获得，系统使用htmlparser获取新浪等开放数据
