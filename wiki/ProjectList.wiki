@@ -1,7 +1,9 @@
 #labels Featured
  # [OJExam]  基于OJ的在线考试系统[php+mysql]        陈强
+ # [Moodle]     基于Moodle的程序设计教学[Moodle+OJ] 陈强
  # [VoicePic]  电脑语音早教系统 [Flash+php]      尹朝欢
  # [StockTracker]  金融证券行情跟踪系统 [java]         王和舰
+
 
 
 {{{
