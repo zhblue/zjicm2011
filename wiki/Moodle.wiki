@@ -16,3 +16,5 @@
  * 实践Moodle理论在程序设计的应用
  * 提高学生自主创新及学习能力
  * 提高程序设计教学效果
+==文献参考==
+http://zjicm2011.googlecode.com/files/OJExam_reference.JPG
