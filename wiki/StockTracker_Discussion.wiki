@@ -1,0 +1,20 @@
+#summary One-sentence summary of this page.
+
+= 答辩问题 =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+  #1题目的外文翻译，Securities需要进一步推敲表意
+  #2外文翻译中，外文原文需要把pdf文档转换成word
+  #3外文翻译的参考文献数目过少，且文献类型过于单一
+  #4任务书主要内容与基本要求，需先概述，后分项
+  #5任务书主要内容与基本要求，分项格式要注意缩进
+  #6开题报告的选题背景与意义，缺少行业背景
+  #7文献的篇幅少，类型代号标得不全 
