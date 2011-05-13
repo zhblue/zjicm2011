@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://struts.apache.org/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="loginForm" type="com.mms.struts.form.LoginForm" />
+        <form-bean name="stockForm" type="com.mms.struts.form.StockForm" />
+        <form-bean name="employeeForm" type="com.mms.struts.form.EmployeeForm" />
+        <form-bean name="assetTypeForm" type="com.mms.struts.form.AssetTypeForm" />
+        <form-bean name="fixForm" type="com.mms.struts.form.FixForm" />
+        <form-bean name="borrowForm" type="com.mms.struts.form.BorrowForm" />
+        <form-bean name="checkForm" type="com.mms.struts.form.CheckForm" />
+		
+		
+
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards />
+	
+	<action-mappings>
+	<!-- 登陆  -->
+		<action attribute="LoginForm" path="/login" name="loginForm" parameter="method" >
+			<forward name="success" path="/main/main.jsp"></forward>
+			<forward name="failure" path="/jsp/success.jsp"></forward>
+			<forward name="toLogin" path="/jsp/regeditsuccess.jsp"></forward>
+		</action>
+	
+	<!-- 对股票操作 -->
+	    <action
+	      attribute="stockForm"
+	      parameter="method"
+	      name="stockForm"
+	      path="/action/stock"
+	      scope="request"
+	      >
+	      
+	       <forward name="liststockbyuser" path="/statManage/listlist.jsp"></forward>
+	      <forward name="getPic" path="/statManage/pic.jsp"></forward>
+	      <forward name="tolistset" path="/action/stock.do?method=listset"></forward>
+	       <forward name="setdesign" path="/statManage/editDesign.jsp"></forward>
+	       <forward name="listset" path="/statManage/listdesign.jsp"></forward>
+	      <forward name="addstockby" path="/action/stock.do?method=listbyuser"></forward>
+	       <forward name="listbyuser" path="/statManage/listbyuser.jsp"></forward>
+	      <forward name="list" path="/statManage/list.jsp"></forward>
+	      <forward name="addstock" path="/action/stock.do?method=list"></forward>
+	      <forward name="listall" path="/statManage/addingList.jsp"></forward>
+	    </action>
+	 <!-- 对资产类型操作 -->   
+	     <action
+      attribute="assetTypeForm"
+      name="assetTypeForm"
+      parameter="method"
+      path="/action/assetType"
+      scope="request"
+       >
+           <forward name="add" path="/action/assetType.do?method=list" />
+	       <forward name="list" path="/infoManage/kindList.jsp" />
+	       <forward name="edit" path="/infoManage/editKind.jsp"></forward>
+      		<forward name="addKindForm" path="/infoManage/addKindForm.jsp"></forward>
+      		 <forward name="depreciation_Chart" path="/addup/depreciation_Chart.jsp"></forward>
+      </action>
+    <!-- 对员工进行操作 -->
+    <action
+      attribute="employeeForm"
+      name="employeeForm"
+      path="/action/employee"
+      scope="request"
+      parameter="method">
+      <forward name="useredit" path="/statManage/editUser.jsp"></forward>
+      <forward name="emp" path="/action/employee.do?method=list"></forward>
+       <forward name="listuser" path="/infoManage/userList.jsp"></forward>
+        <forward name="info" path="/infoManage/userInfo.jsp"></forward>
+        <forward name="saveuser" path="/action/employee.do?method=list"></forward>
+    </action>
+    <!-- 对资产保修的操作 -->
+    <action
+      attribute="fixForm"
+      name="fixForm"
+      path="/action/fix"
+      scope="request"
+      parameter="method"
+      >
+     <forward name="fixedback" path="/action/fix.do?method=fixedlist"></forward>
+      <forward name="fixlist" path="/action/asset.do?method=fixlist"></forward>
+      <forward name="fixedlist" path="/assetManage/fixedList.jsp"></forward>
+    </action>
+    <!-- 对申借表的操作 -->
+    <action
+      attribute="borrowForm"
+      name="borrowForm"
+      parameter="method"
+      path="/action/borrow"
+      scope="request"
+       >
+       <forward name="tolendform" path="/lendManage/lendForm.jsp"></forward>
+       <forward name="lend" path="/action/asset.do?method=lendlist"></forward>
+       <forward name="lendinglist" path="/statManage/lendingList.jsp"></forward>
+       <forward name="lendagree" path="/action/borrow.do?method=lendinglist"></forward>
+       <forward name="fixagree" path="/action/borrow.do?method=fixinglist"></forward>
+       <forward name="rejectagree" path="/action/borrow.do?method=deletelist"></forward>
+       <forward name="lendreject" path="/action/borrow.do?method=lendinglist"></forward>
+       <forward name="addinglist" path="/statManage/addingList.jsp"></forward>
+       <forward name="fixinglist" path="/statManage/fixingList.jsp"></forward>
+       <forward name="deletelist" path="/statManage/rejectingList.jsp"></forward>
+       <forward name="lendedlist" path="/assetManage/lendedList.jsp"></forward>
+       <forward name="back" path="/action/borrow.do?method=lendedlist"></forward>
+       </action>
+    <!-- 对查询的操作 -->
+    <action
+      attribute="checkForm"
+      name="checkForm"
+      path="/action/check"
+      scope="request"
+      >
+      <forward name="check" path="/lendManage/checkList.jsp"></forward>
+      </action>
+    <action path="/validate" type="com.mms.struts.action.ValidateAction" />
+	
+	</action-mappings>
+
+	<controller>
+		<set-property property="processorClass"
+			value="org.springframework.web.struts.DelegatingRequestProcessor" />
+	</controller>
+	<message-resources parameter="com.mms.struts.ApplicationResources" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/classes/applicationContext.xml" />
+	</plug-in>
+
+</struts-config>
+
