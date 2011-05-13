@@ -1,0 +1,22 @@
+#
+#Tue May 03 09:16:00 CST 2011
+genBasicCompId=false
+sessionFactoryName=
+profile=
+daoSFId=
+version=3.2
+jndiPath=
+detectM2M=true
+reStrategyClass=
+springDaoFile=
+useJavaTypes=true
+keyGenerator=increment
+libInstallFolder=/WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=db
+basePersistenceClass=
+reSettingsFile=/asset_mms/hibernate.reveng.xml
+configFile=/asset_mms/src/applicationContext.xml
+createConfigFile=false
+addLibs2Classpath=true

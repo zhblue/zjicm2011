@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="db" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/assetdb">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+		</bean>
+	<bean id="sf"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="db" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/mms/pojo/Popedom.hbm.xml</value>
+				<value>com/mms/pojo/TUser.hbm.xml</value>
+				<value>com/mms/pojo/Asset.hbm.xml</value>
+				<value>com/mms/pojo/Employee.hbm.xml</value>
+				<value>com/mms/pojo/AssetType.hbm.xml</value>
+				<value>com/mms/pojo/Role.hbm.xml</value>
+				<value>com/mms/pojo/Fix.hbm.xml</value>
+				<value>com/mms/pojo/Borrow.hbm.xml</value>
+				<value>com/mms/pojo/Stock.hbm.xml</value>
+				<value>com/mms/pojo/Degisn.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 持久层 -->
+	<bean id="TUserImp" class="com.mms.daoImp.TUserImp">
+		<property name="sf">
+			<ref bean="sf" />
+		</property>
+		<property name="sessionFactory">
+			<ref bean="sf" />
+		</property>
+	</bean>
+	<bean id="AssetTypeImp" class="com.mms.daoImp.AssetTypeImp">
+		<property name="sessionFactory">
+			<ref bean="sf" />
+		</property>
+	</bean>
+	<bean id="BorrowImp" class="com.mms.daoImp.BorrowImp">
+		<property name="sessionFactory">
+			<ref bean="sf" />
+		</property>
+	</bean>
+	<bean id="EmployeeImp" class="com.mms.daoImp.EmployeeImp">
+		<property name="sessionFactory">
+			<ref bean="sf" />
+		</property>
+	</bean>
+	<bean id="FixImp" class="com.mms.daoImp.FixImp">
+		<property name="sessionFactory">
+			<ref bean="sf" />
+		</property>
+	</bean>
+	<bean id="PopedomImp" class="com.mms.daoImp.PopedomImp">
+		<property name="sessionFactory">
+			<ref bean="sf" />
+		</property>
+	</bean>
+	<bean id="RoleImp" class="com.mms.daoImp.RoleImp">
+		<property name="sessionFactory">
+			<ref bean="sf" />
+		</property>
+	</bean>
+	<bean id="AssetImp" class="com.mms.daoImp.AssetImp">
+		<property name="sessionFactory">
+			<ref bean="sf" />
+		</property>
+	</bean>
+	<bean id="CheckImp" class="com.mms.daoImp.CheckImp">
+		<property name="sf">
+			<ref bean="sf"/>
+		</property>
+		<property name="iat">
+			<ref bean="AssetTypeImp"/>
+		</property>
+	</bean>
+	<bean id="StockImp" class="com.mms.daoImp.StockImp">
+		<property name="sf">
+			<ref bean="sf"/>
+		</property>
+		<property name="sessionFactory">
+			<ref bean="sf" />
+		</property>
+	</bean>
+	<bean id="DegisnImp" class="com.mms.daoImp.DegisnImp">
+		<property name="sessionFactory">
+			<ref bean="sf" />
+		</property>
+	</bean>
+	<!-- 逻辑层 -->
+	<bean id="LoginImp" class="com.mms.serviceImp.LoginImp">
+		<property name="TUser">
+			<ref bean="TUserImp" />
+		</property>
+	</bean>
+	<bean id="AssetTypeServiceImp" class="com.mms.serviceImp.AssetTypeServiceImp">
+		<property name="sf">
+			<ref bean="sf"/>
+		</property>
+		<property name="ati">
+			<ref bean="AssetTypeImp"/>
+		</property>
+	</bean>
+	<bean id="EmployeeServiceImp" class="com.mms.serviceImp.EmployeeServiceImp">
+		<property name="ei">
+			<ref bean="EmployeeImp"/>
+		</property>
+	</bean>
+	<bean id="AssetServiceImp" class="com.mms.serviceImp.AssetServiceImp">
+		<property name="ai">
+			<ref bean="AssetImp"/>
+		</property>
+	</bean>
+	<bean id="FixServiceImp" class="com.mms.serviceImp.FixServiceImp">
+		<property name="f">
+			<ref bean="FixImp"/>
+		</property>
+	</bean>
+	<bean id="BorrowServiceImp" class="com.mms.serviceImp.BorrowServiceImp">
+		<property name="ib">
+			<ref bean="BorrowImp"/>
+		</property>
+	</bean>
+	<bean id="CheckServiceImp" class="com.mms.serviceImp.CheckServiceImp">
+		<property name="sf">
+		    <ref bean="sf"/>
+		</property>
+	</bean>
+	<!-- WEB -->
+	<bean name="/login" class="com.mms.struts.action.LoginAction">
+		<property name="login">
+			<ref bean="LoginImp" /> 
+		</property>
+		<property name="it">
+			<ref bean="TUserImp" /> 
+		</property>
+	</bean>
+	
+	<bean name="/action/stock" class="com.mms.struts.action.StockAction">
+		<property name="is">
+			<ref bean="StockImp"/>
+		</property>	
+		<property name="ide">
+			<ref bean="DegisnImp"/>
+		</property>	
+	</bean>
+	<bean name="/action/assetType" class="com.mms.struts.action.AssetTypeAction">
+		<property name="ats">
+			<ref bean="AssetTypeServiceImp"/>
+		</property>
+		<property name="at">
+			<ref bean="AssetTypeImp" />
+		</property>
+	</bean>
+	<bean name="/action/employee" class="com.mms.struts.action.EmployeeAction">
+		<property name="esi">
+			<ref bean="EmployeeServiceImp"/>
+		</property>
+		<property name="r">
+			<ref bean="RoleImp"/>
+		</property>
+		<property name="tu">
+			<ref bean="TUserImp"/>
+		</property>
+	</bean>
+	<bean name="/action/fix" class="com.mms.struts.action.FixAction">
+		<property name="asi">
+			<ref bean="AssetServiceImp"/>
+		</property>	
+		<property name="i">
+			<ref bean="EmployeeImp"/>
+		</property>	
+		<property name="ifs">
+			<ref bean="FixServiceImp"/>
+		</property>
+	</bean>
+	<bean name="/action/borrow" class="com.mms.struts.action.BorrowAction">
+		<property name="asi">
+			<ref bean="AssetServiceImp"/>
+		</property>
+	    <property name="ies">
+	    	<ref bean="EmployeeServiceImp"/>
+	    </property>
+	    <property name="ibs">
+	    	<ref bean="BorrowServiceImp"/> 	
+	    </property>
+	    <property name="ifs">
+	    	<ref bean="FixServiceImp"/>
+	    </property>
+	</bean>	
+	<bean name="/action/check" class="com.mms.struts.action.CheckAction">
+		<property name="ic">
+			<ref bean="CheckServiceImp"/>
+		</property>
+		<property name="iats">
+			<ref bean="AssetTypeServiceImp"/>
+		</property>
+		
+	</bean>
+
+	</beans>
