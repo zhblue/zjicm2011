@@ -14,7 +14,7 @@ class assignment_hustoj extends assignment_base {
         global $PAGE,$DB;
 //      $PAGE->set_pagelayout('johnnychen');
 //		$PAGE->requires->js("/mod/assignment/type/hustoj/hustoj.js", true);
-        $this->type = 'online';
+        $this->type = 'hustoj';
        	if($this->assignment && !$this->assignment->problem_id){
 			$this->assignment->problem_id=$DB->get_field_select("assignment_hustoj","problem_id","assignment_id=".$this->assignment->id);
        	}
@@ -356,7 +356,7 @@ class assignment_hustoj extends assignment_base {
             return '';
         }
 
-        $link = new moodle_url("/mod/assignment/type/online/file.php?id={$this->cm->id}&userid={$submission->userid}");
+        $link = new moodle_url("/mod/assignment/type/hustoj/file.php?id={$this->cm->id}&userid={$submission->userid}");
         $action = new popup_action('click', $link, 'file'.$userid, array('height' => 450, 'width' => 580));
         $popup = $OUTPUT->action_link($link, get_string('popupinnewwindow','assignment'), $action, array('title'=>get_string('submission', 'assignment')));
 
@@ -374,8 +374,7 @@ class assignment_hustoj extends assignment_base {
         }
         $wordcount .= '</p>';
 
-        $text = file_rewrite_pluginfile_urls($submission->data1, 'pluginfile.php', $this->context->id, 'mod_assignment', $this->filearea, $submission->id);
-        return $wordcount . format_text($text, $submission->data2, array('overflowdiv'=>true));
+        return $wordcount.'<pre class="brush:c++;">'.htmlspecialchars($submission->data1).'</pre>';
 
 
         }
