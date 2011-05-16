@@ -7,7 +7,7 @@
  * @param theme_config $theme
  * @return string 
  */
-function magazine_process_css($css, $theme) {
+function hustoj_process_css($css, $theme) {
 
     // Set the link color
     if (!empty($theme->settings->linkcolor)) {
@@ -15,7 +15,7 @@ function magazine_process_css($css, $theme) {
     } else {
         $linkcolor = null;
     }
-    $css = magazine_set_linkcolor($css, $linkcolor);
+    $css = hustoj_set_linkcolor($css, $linkcolor);
 
 	// Set the link hover color
     if (!empty($theme->settings->linkhover)) {
@@ -23,7 +23,7 @@ function magazine_process_css($css, $theme) {
     } else {
         $linkhover = null;
     }
-    $css = magazine_set_linkhover($css, $linkhover);
+    $css = hustoj_set_linkhover($css, $linkhover);
     
     // Set the main color
     if (!empty($theme->settings->maincolor)) {
@@ -31,7 +31,7 @@ function magazine_process_css($css, $theme) {
     } else {
         $maincolor = null;
     }
-    $css = magazine_set_maincolor($css, $maincolor);
+    $css = hustoj_set_maincolor($css, $maincolor);
     
     // Set the main accent color
     if (!empty($theme->settings->maincoloraccent)) {
@@ -39,7 +39,7 @@ function magazine_process_css($css, $theme) {
     } else {
         $maincoloraccent = null;
     }
-    $css = magazine_set_maincoloraccent($css, $maincoloraccent);
+    $css = hustoj_set_maincoloraccent($css, $maincoloraccent);
    
    // Set the main headings color
     if (!empty($theme->settings->headingcolor)) {
@@ -47,7 +47,7 @@ function magazine_process_css($css, $theme) {
     } else {
         $headingcolor = null;
     }
-    $css = magazine_set_headingcolor($css, $headingcolor);
+    $css = hustoj_set_headingcolor($css, $headingcolor);
     
      // Set the block headings color
     if (!empty($theme->settings->blockcolor)) {
@@ -55,7 +55,7 @@ function magazine_process_css($css, $theme) {
     } else {
         $blockcolor = null;
     }
-    $css = magazine_set_blockcolor($css, $blockcolor);
+    $css = hustoj_set_blockcolor($css, $blockcolor);
     
     // Set the forum background color
     if (!empty($theme->settings->forumback)) {
@@ -63,7 +63,7 @@ function magazine_process_css($css, $theme) {
     } else {
         $forumback = null;
     }
-    $css = magazine_set_forumback($css, $forumback);
+    $css = hustoj_set_forumback($css, $forumback);
     
      // Set the body background image
     if (!empty($theme->settings->background)) {
@@ -71,7 +71,7 @@ function magazine_process_css($css, $theme) {
     } else {
         $background = null;
     }
-    $css = magazine_set_background($css, $background);
+    $css = hustoj_set_background($css, $background);
     
      // Set the logo image
     if (!empty($theme->settings->logo)) {
@@ -79,7 +79,7 @@ function magazine_process_css($css, $theme) {
     } else {
         $logo = null;
     }
-    $css = magazine_set_logo($css, $logo);
+    $css = hustoj_set_logo($css, $logo);
     
 
     // Return the CSS
@@ -92,7 +92,7 @@ function magazine_process_css($css, $theme) {
  * Sets the link color variable in CSS
  *
  */
-function magazine_set_linkcolor($css, $linkcolor) {
+function hustoj_set_linkcolor($css, $linkcolor) {
     $tag = '[[setting:linkcolor]]';
     $replacement = $linkcolor;
     if (is_null($replacement)) {
@@ -102,7 +102,7 @@ function magazine_set_linkcolor($css, $linkcolor) {
     return $css;
 }
 
-function magazine_set_linkhover($css, $linkhover) {
+function hustoj_set_linkhover($css, $linkhover) {
     $tag = '[[setting:linkhover]]';
     $replacement = $linkhover;
     if (is_null($replacement)) {
@@ -112,7 +112,7 @@ function magazine_set_linkhover($css, $linkhover) {
     return $css;
 }
 
-function magazine_set_maincolor($css, $maincolor) {
+function hustoj_set_maincolor($css, $maincolor) {
     $tag = '[[setting:maincolor]]';
     $replacement = $maincolor;
     if (is_null($replacement)) {
@@ -122,7 +122,7 @@ function magazine_set_maincolor($css, $maincolor) {
     return $css;
 }
 
-function magazine_set_maincoloraccent($css, $maincoloraccent) {
+function hustoj_set_maincoloraccent($css, $maincoloraccent) {
     $tag = '[[setting:maincoloraccent]]';
     $replacement = $maincoloraccent;
     if (is_null($replacement)) {
@@ -132,7 +132,7 @@ function magazine_set_maincoloraccent($css, $maincoloraccent) {
     return $css;
 }
 
-function magazine_set_headingcolor($css, $headingcolor) {
+function hustoj_set_headingcolor($css, $headingcolor) {
     $tag = '[[setting:headingcolor]]';
     $replacement = $headingcolor;
     if (is_null($replacement)) {
@@ -142,7 +142,7 @@ function magazine_set_headingcolor($css, $headingcolor) {
     return $css;
 }
 
-function magazine_set_blockcolor($css, $blockcolor) {
+function hustoj_set_blockcolor($css, $blockcolor) {
     $tag = '[[setting:blockcolor]]';
     $replacement = $blockcolor;
     if (is_null($replacement)) {
@@ -152,7 +152,7 @@ function magazine_set_blockcolor($css, $blockcolor) {
     return $css;
 }
 
-function magazine_set_forumback($css, $forumback) {
+function hustoj_set_forumback($css, $forumback) {
     $tag = '[[setting:forumback]]';
     $replacement = $forumback;
     if (is_null($replacement)) {
@@ -162,7 +162,7 @@ function magazine_set_forumback($css, $forumback) {
     return $css;
 }
 
-function magazine_set_background($css, $background) {
+function hustoj_set_background($css, $background) {
 	global $OUTPUT;
 	$tag = '[[setting:background]]';
 	$replacement = $background;
@@ -173,7 +173,7 @@ function magazine_set_background($css, $background) {
 	return $css;
 }
 
-function magazine_set_logo($css, $logo) {
+function hustoj_set_logo($css, $logo) {
 	global $OUTPUT;
 	$tag = '[[setting:logo]]';
 	$replacement = $logo;

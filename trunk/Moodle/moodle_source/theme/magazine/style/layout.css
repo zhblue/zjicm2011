@@ -29,7 +29,9 @@
 	position: relative;
 	width: 52%;
 }
-
+#region-main{
+	background-image:url("http://acm.zjicm.org/image/background.jpg");
+}
 #page-content #region-pre {
 	float: left;
 	left: 26%;

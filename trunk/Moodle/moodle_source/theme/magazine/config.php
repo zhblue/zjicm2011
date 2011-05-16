@@ -1,6 +1,6 @@
 <?php
 
-$THEME->name = 'magazine';
+$THEME->name = 'hustoj';
 
 ////////////////////////////////////////////////////
 // Name of the theme. Most likely the name of
@@ -216,4 +216,4 @@ $THEME->layouts = array(
 ////////////////////////////////////////////////////
 // Controls the colours for the MP3 player
 ////////////////////////////////////////////////////
-$THEME->csspostprocess = 'magazine_process_css';
+$THEME->csspostprocess = 'hustoj_process_css';
