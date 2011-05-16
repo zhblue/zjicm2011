@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/assignment/type/hustoj/db" VERSION="20110421" COMMENT="XMLDB file for Moodle mod/assignment/type/hustoj"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="assignment_hustoj" COMMENT="Default comment for hustoj, please edit me">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="assignment_id"/>
+        <FIELD NAME="assignment_id" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" SEQUENCE="false" PREVIOUS="id" NEXT="problem_id"/>
+        <FIELD NAME="problem_id" TYPE="int" LENGTH="11" NOTNULL="false" UNSIGNED="false" SEQUENCE="false" PREVIOUS="assignment_id"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
