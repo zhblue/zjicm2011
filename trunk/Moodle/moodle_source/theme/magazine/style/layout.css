@@ -53,11 +53,38 @@
 	padding: 10px 0;
 	border: 0px solid #3333cc;
 }
-
+#region-main-wrap .weeks h3{
+	height:25px;
+	background:url("http://moodle2.0.zjicm.org/theme/hustoj/pix/acm.png") no-repeat 20px top;
+	padding-top:20px;
+	font-size:14px;
+	font-weight:bold;
+	color:#105070;
+}
+#hustoj h3{
+	background:url("http://moodle2.0.zjicm.org/theme/hustoj/pix/acm.png") no-repeat 20px -112px;
+	border-bottom:1px solid #CCCCCC;
+	height:17px;
+	padding:28px 0  0 70px;
+}
 #page-content {
 	overflow: hidden
 }
-
+#section-0{
+	background:url("http://moodle2.0.zjicm.org/theme/hustoj/pix/tongpai.png") no-repeat 100px bottom;
+}
+#region-main-wrap #section-0 h3{
+	height:46px;
+	padding:40px 0 0 170px;
+	background-position:0 0;
+}
+#section-1{
+	background:url("http://moodle2.0.zjicm.org/theme/hustoj/pix/08acm.png") no-repeat scroll 10px bottom transparent;
+	padding-bottom:310px;
+}
+#textcontainer-wrap{
+	background:url("http://moodle2.0.zjicm.org/theme/hustoj/pix/hustoj_logo.png") no-repeat 60px 44px transparent;
+}
 /** Only side pre **/
 
 .side-pre-only #page-content #region-main-box {
@@ -137,6 +164,9 @@
 
 #region-pre {
 	padding-top: 0px;
+}
+.block_navigation .content{
+
 }
 
 /** fix for some extra padding in side-post-only view **/
