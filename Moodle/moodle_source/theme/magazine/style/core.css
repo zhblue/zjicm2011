@@ -108,7 +108,7 @@ div.thetitle {
     float: left;
     overflow: hidden;
     padding-left: 3px;
-    margin-top: 40px;
+    margin-top: 10px;
     }
 
 #nologo.nomenu {
@@ -116,7 +116,7 @@ div.thetitle {
 }
 
 #nologo a, #nologo {
-    font-size: 35px;
+    font-size: 30px;
     font-style: italic;
     font-family: Palatino,"Palatino Linotype",Georgia,"Times New Roman",serif;
     font-weight: 800;
@@ -942,19 +942,6 @@ li.current {
 
 li.current div.content {
     background: #fff;
-}
-
-h3.weekdates {
-    border: 1px solid #ccc;
-    background: #eeeeee url([[pix:theme|bart5]]) repeat-x;
-    width: 170px;
-    font-size: 11px !important;
-    font-weight: 200;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0px 0px 3px;
-    color: #333333 !important;
-    padding: 3px;
 }
 
 .current h3.weekdates {
