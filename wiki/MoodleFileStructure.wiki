@@ -1,10 +1,29 @@
 = Moodle hustoj插件的文件结构=
-==涉猎系统==
-[http://www.moodle.org Moodle官方网站]
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+==涉及的开源系统==
+{{{
+由于插件是基于Moodle的，而内容则是关于hustoj的，因此两个开源软件都进行了相应代码的开发。下面就介绍一下在svn中自己修改的部分代码及结构。
+}}}
+ * [http://www.moodle.org Moodle官方网站]
+ * [http://code.google.com/p/hustoj/ hustoj在线评测系统]
+==Moodle2.0==
+{{{
+包含了两部分内容：插件代码以及主题代码
+}}}
+====插件代码====
+ * 路径：[https://zjicm2011.googlecode.com/svn/trunk/Moodle/moodle_source/mod/assignment/type/hustoj /mod/assignment/types/hustoj]
+ * 使用前提：moodle安装必须与hustoj在同一个大域下面，因为两个应用间是通过ajax进行的，非同域会出现浏览器跨域限制。
+ * 使用方法：将该文件夹拷贝到自己的mod/assignment/types即可
+====主题代码====
+ * 路径：[https://zjicm2011.googlecode.com/svn/trunk/Moodle/moodle_source/theme/magazine /theme/hustoj]
+ * 使用方式：直接将该文件夹考入自己moodle的theme文件夹即可
+==hustoj==
+{{{
+没有修改hustoj的源代码，但为了实现异步调用，添加了一些文件，下面将会一一罗列。
+}}}
+ * 路径：https://zjicm2011.googlecode.com/svn/trunk/Moodle/hustoj_source
+ * ajax.php：异步调用控制器
+ * ajax_bridge.html ：异步调用iframe组件
+ * problem_ajax.php
+ * problemset_ajax.php
+ * status_ajax.php
+ * submit_ajax.php
