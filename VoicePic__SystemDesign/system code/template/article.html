@@ -1,0 +1,75 @@
+
+
+		<div class="left">
+			<h2>
+				<div class="ftl"></div>
+				{articleType}
+			</h2>
+			<div class="fm">
+
+				<h1>{articleTitle}</h1>
+				<div class="articleInfo">
+					<span class="time">{articleDate}</span>
+					<span class="pv">{articleSum}</span>
+					<span><a href="javascript:window.external.addfavorite('{webUrl}/article/{articleId}.html','{title}');">收藏此文章</a></span>
+					<span><a href="#publish">发表评论</a></span>
+				</div>
+
+				<div class="content">
+					{article}
+
+					{articlePage}
+				</div>
+
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+
+
+			<div class="ft"><div class="ftl"></div></div>
+			<div class="fm relation">
+				{relation}
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+
+			<h2 id="publish">
+				<div class="ftl"></div>
+				<span>Publish Comment</span><cite>发表评论</cite>
+			</h2>
+			<div class="fm">
+				<div class="gbInfo">
+					<p><img src="../../include/code.php" alt="点击刷新验证码" class="code" onclick="this.src+='?' + Math.random();" />
+					<input type="text" name="codeNum" id="codeNum" class="short" maxlength="4" /> <label for="codeNum">验证码<span id="label1">*</span></label>
+					点击图片可刷新验证码</p>
+					<p><input type="text" id="comname" maxlength="12" /> <label for="comname">你的称呼（必须）<span id="label2">*</span></label></p>
+					<p class="textarea comment"><textarea id="comcontent"></textarea></p>
+					<p><input type="submit" id="commentSubmit" onclick="postdata({articleId});" class="button" value="发表" /></p>
+				</div>
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+
+<script type="text/javascript" src="../../script/jquery.js"></script>
+<script type="text/javascript" src="../../script/ajax.js"></script>
+<script type="text/javascript">
+$(document).ready(
+	function() {
+		comment(1,{articleId})
+	}
+);
+</script>
+
+			<h2>
+				<div class="ftl"></div>
+				<span>Comment</span><cite>网友评论</cite>
+				<!--<a class="publish" href="#publish">发表评论</a>-->
+			</h2>
+			<div class="fm">
+				<div id="postTemp" class="commentTemp">
+				</div>
+				<div id="ajaxContent">
+				</div>
+
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+
+		</div><!-- left -->
+

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ych" />
+<meta name="description" content="中级游戏 - 儿童网站" />
+<meta name="keywords" content="中级游戏, 简易早教网站, PHP网站程序, 简单PHP网站程序, www.yinchaohuan.cn." />
+<title>中级游戏 - 儿童网站</title>
+<link href="/css/dafi.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/script/tabbed.js"></script>
+<style type="text/css">
+<!--
+#selected4 #m4{color:#f33;font-weight:bold;background:url(/css/img/bg.gif) -260px -40px no-repeat;}
+-->
+</style>
+</head>
+<body id="selected4"><!-- 此标签的作用是让导航处于选中当前页面状态 -->
+<div class="wrap">
+
+
+
+	<div class="head">
+
+		<div class="hText">
+			<a href="http://localhost">Home</a> | 
+			<a href="http://localhost" target="_blank">About</a> | 
+			<a href="javascript:window.external.addfavorite('http://localhost','儿童网站');">Favicon</a>
+		</div><!-- head -->
+
+		<div class="hLogo">
+			<img src="/images/head-logo.gif" alt="儿童网站" />
+		</div><!-- hLogo -->
+
+		<div class="hSearch">
+			<form action="/search.php" method="post" onsubmit="return hSearch(this);">
+				<input type="text" name="keyWord" id="keyWord" maxlength="20" value="搜索：请输入2个以上字符" onclick="if(this.value=='搜索：请输入2个以上字符'){this.value='';}" />
+				<input type="submit" class="button" value="" />
+			</form>
+		</div><!-- hSearch -->
+
+		<div class="hNav">
+			<ul>
+				<li><a href="/index.php" id="mI">首页</a></li>
+<li onmouseover="this.className='over'" onmouseout="this.className=''"><a id="m8" href="javascript://;">学习</a>
+<ul>
+<li><a href="/column/9.html" id="m9">看图识字</a></li>
+<li><a href="/column/10.html" id="m10">语音</a></li>
+<li class="e1"></li><li class="e2"></li><li class="e3"></li>
+</ul>
+</li>
+<li onmouseover="this.className='over'" onmouseout="this.className=''"><a id="m4" href="javascript://;">游戏</a>
+<ul>
+<li><a href="/column/5.html" id="m5">初级游戏</a></li>
+<li><a href="/column/11.html" id="m11">中级游戏</a></li>
+<li><a href="/column/12.html" id="m12">高级游戏</a></li>
+<li class="e1"></li><li class="e2"></li><li class="e3"></li>
+</ul>
+</li>
+<li onmouseover="this.className='over'" onmouseout="this.className=''"><a id="m6" href="javascript://;">相册</a>
+<ul>
+<li><a href="/column/7.html" id="m7">相册</a></li>
+<li class="e1"></li><li class="e2"></li><li class="e3"></li>
+</ul>
+</li>
+<ul>
+</ul>
+</li>
+<ul>
+</ul>
+</li>
+<li><a href="/voice.php" id="mL">语音</a></li>
+			</ul>
+		</div>
+
+	</div><!-- head -->
+
+	<div class="main">
+
+		<div class="left">
+			<h2>
+				<div class="ftl"></div>
+				<span></span>
+				<cite>中级游戏</cite>
+			</h2>
+			<div class="fm tArticleBox">
+				<ul class="tArticle">
+					<li><cite><a href="/article/11-05-14/6.html" title="1">1</a></cite><em class="new"><u>置顶文章</u></em><span>11-05-14</span></li>
+
+				</ul>
+
+				<div class="listPage">
+					<strong title="当前第1页">1</strong> 
+   				</div>
+
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+
+		</div><!-- left -->
+
+		<div class="right">
+
+			<h2>
+<div class="ftl"></div>
+<span>education</span>
+<cite>关于早教</cite>
+<a class="more" href="http://www.dafi.cn"><u>More...</u></a>
+</h2>
+<div class="fm userDefine">
+<p>　　这是毕业设计，我快疯了哦</p>
+<p>　　问题还好多啊，烦死了</p>
+</div>
+<div class="fe"><div class="fel"></div></div>
+
+			<ul class="tabA tabB">
+				<li class="tabMenuL">
+					<a name="iArticle" target="iTabC" onmouseover="return changeTab(this);" class="selected">最新文章</a>
+				</li>
+				<li class="tabMenuM">
+					<a name="iArticle" target="iTabD" onmouseover="return changeTab(this);">热门文章</a>
+				</li>
+				<li class="tabMenuR">
+					<a name="iArticle" target="iTabE" onmouseover="return changeTab(this);">置顶文章</a>
+				</li>
+			</ul>
+			<div class="fm">
+				<ul class="iArticle" id="iTabC">
+					<li><cite><a href="/article/11-05-14/9.html" title="123">123</a></cite></li>
+<li class="even"><cite><a href="/article/11-05-14/8.html" title="we">we</a></cite></li>
+<li><cite><a href="/article/11-05-14/7.html" title="12">12</a></cite></li>
+<li class="even"><cite><a href="/article/11-05-14/6.html" title="1">1</a></cite></li>
+
+				</ul>
+				<ul class="iArticle" id="iTabD" style="display:none;">
+					<li><cite><a href="/article/11-05-14/6.html" title="1">1</a></cite></li>
+<li class="even"><cite><a href="/article/11-05-14/8.html" title="we">we</a></cite></li>
+<li><cite><a href="/article/11-05-14/9.html" title="123">123</a></cite></li>
+<li class="even"><cite><a href="/article/11-05-14/7.html" title="12">12</a></cite></li>
+
+				</ul>
+				<ul class="iArticle" id="iTabE" style="display:none;">
+					<li><cite><a href="/article/11-05-14/9.html" title="123">123</a></cite></li>
+<li class="even"><cite><a href="/article/11-05-14/8.html" title="we">we</a></cite></li>
+<li><cite><a href="/article/11-05-14/7.html" title="12">12</a></cite></li>
+<li class="even"><cite><a href="/article/11-05-14/6.html" title="1">1</a></cite></li>
+
+				</ul>
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+
+			<ul class="tabA">
+				<li class="tabMenuL">
+					<a name="userTab" target="tabL" onmouseover="return changeTab(this);" href="/leave.php" class="selected">最新留言</a>
+				</li>
+				<li class="tabMenuR">
+					<a name="userTab" target="tabC" onmouseover="return changeTab(this);" href="/comment.php">最近评论</a>
+				</li>
+			</ul>
+			<div class="fm iLeave">
+				<ul class="newLeave" id="tabL">
+					<li>
+<em><img src="/images/head/thumbs/head-05.gif" alt="ych" /></em>
+<span>11-04-28 12:06</span>
+<cite><a href="/leave.php" title="欢迎使用此系统，请至少保留一条已通过审核的留言数据，以免留言本无法访问。你可以在后台编辑此留言，但是，在没有其他留言的情况下，请勿删除此留言。...">欢迎使用此系统，请至少保留一条已通过审核的留言数据，以免留言</a></cite>
+</li>
+
+
+				</ul>
+				<ul class="newLeave" id="tabC" style="display:none;">
+					
+				</ul>
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+
+		</div><!-- right -->
+
+	</div><!-- main -->
+
+
+	<div class="foot">
+
+		<div class="fLink">
+			<a class="toTop" href="#">GO TO TOP</a>
+			<a href="http://localhost">Home</a> | 
+			<a href="http://bbs.dafi.cn" target="_blank">Forum</a> | 
+			<a href="http://www.dafi.cn" target="_blank">About</a> | 
+			<a class="mail" href="mailto:919314856@qq.com">919314856@qq.com</a> | 
+			<a href="http://www.miibeian.gov.cn" target="_blank">哈哈</a> | 
+			<a class="cn" href="/link.php">申请友情链接</a>
+		</div>
+
+		<div class="fLogo">
+			<a href="http://www.yincaohuan" target="_blank"><img src="/images/logo-left.gif" alt="早教网" /></a>
+			<a href="http://www.yincaohuan" target="_blank"><img src="/images/logo.gif" alt="早教网" /></a>
+		</div><!-- fLogo -->
+
+		<div class="fText">
+			<p class="cn">此系统界面由yinchaohuan设计制作，PHP程序由yinchaohuan编写</p>
+			<p>	Copyright &copy; 2011 by <a href="http://www.yinchaohuan" target="_blank">yinchaohuan</a> All right reserved.</p>
+			<p class="count"><script language="javascript" type="text/javascript" src="http://js.users.51.la/2728670.js"></script>
+<noscript><a href="http://www.51.la/?2728670" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/2728670.asp" style="border:none" /></a></noscript></p>
+		</div><!-- fText -->
+
+	</div><!-- foot -->
+
+
+
+</div>
+
+
+</body>
+</html><!-- www.ych.cn -->

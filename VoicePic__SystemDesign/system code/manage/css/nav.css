@@ -1,0 +1,69 @@
+@charset "utf-8";
+* {margin:0;padding:0;border:0;}
+body {
+	font: 12px tahoma, sans-serif;
+	*font: 11px tahoma, sans-serif;
+	color: #fff;
+}
+a {text-decoration:none;}
+#nav {
+	width: 210px;
+	overflow: hidden;
+}
+.welcome {
+	width: 180px;
+	height: 23px;
+	padding: 0 11px;
+	margin: 0 0 0 7px;
+	text-align: left;
+	white-space: nowrap;
+	background: url(images/nav.gif) left -7px;
+	overflow: hidden;
+}
+.welcome * {
+	overflow: hidden;
+}
+.welcome cite {
+	float: left;
+	width: 125px;
+	font-style: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.welcome span {
+	color: #9c0;
+}
+.welcome a {
+	float: right;
+	width: 50px;
+	color: #f36;
+}
+.navMenu {
+	width: 194px;
+	margin: 0 0 0 11px;
+}
+.navMenu h3 {
+	display: block;
+	width: 170px;
+	height: 21px;
+	padding: 0 14px;
+	margin: 5px 0 0;
+	color: #666;
+	font: bold 12px/21px tahoma, sans-serif;
+	background: url(images/nav.gif) left -30px no-repeat;
+	cursor: pointer;
+	overflow: hidden;
+}
+.navMenu a {
+	color: #666;
+}
+.navMenu ul {
+	padding: 2px 5px;
+	zoom: 1;
+}
+.navMenu ul li {
+	line-height: 20px;
+	padding: 0 9px;
+	background: url(images/nav.gif) left -70px no-repeat;
+}

@@ -1,0 +1,169 @@
+
+
+		<div class="iLeft">
+
+			<div class="iSlide">
+				{slide}
+			</div>
+
+			{custom}
+
+		</div><!-- left -->
+
+
+		<div class="middle">
+
+			<div class="focus">
+				<ul class="tabF">
+					<li><a name="fTab" target="fTabA" onmouseover="return changeTab(this);">最新</a></li>
+					<li><a name="fTab" target="fTabB" onmouseover="return changeTab(this);">热门</a></li>
+					<li><a name="fTab" target="fTabC" onmouseover="return changeTab(this);" class="selected">置顶</a></li>
+				</ul>
+				<div class="fm">
+					<ul class="fList" id="fTabA" style="display:none">
+						{articleList[0,8,30,0,1,1]}
+					</ul>
+					<ul class="fList fHot" id="fTabB" style="display:none;">
+						{articleList[0,8,30,0,1,2]}
+					</ul>
+					<ul class="fList fTop" id="fTabC">
+						{articleList[0,8,30,0,1,3]}
+					</ul>
+				</div>
+				<div class="fe"></div>
+			</div>
+
+			<h2 class="easy">
+				<span>PhotoShow</span>
+				<cite>相册展示</cite>
+				<a class="more" href="{tcmsDir}column/7.html"></a>
+			</h2>
+			<div class="iFoto">
+				{album[0,1,5]}
+			</div>
+
+		</div><!-- middle -->
+
+
+		<div class="right">
+
+			<h2>
+				<div class="ftl"></div>
+				<span>Login</span>
+				<cite>登陆早教系统</cite>
+			</h2>
+			<div class="fm">
+				<p class="space"></p>
+
+				{vlogin}
+
+			</div>
+
+			<div class="fe"><div class="fel"></div></div>
+			<ul class="tabA">
+				<li class="tabMenuL">
+					<a name="userTab" target="tabL" onmouseover="return changeTab(this);" href="{tcmsDir}leave.php" class="selected">最新留言</a>
+				</li>
+				<li class="tabMenuR">
+					<a name="userTab" target="tabC" onmouseover="return changeTab(this);" href="{tcmsDir}comment.php">最近评论</a>
+				</li>
+			</ul>
+			<div class="fm iLeave">
+				<ul class="newLeave" id="tabL">
+					{leave[5]}
+				</ul>
+				<ul class="newLeave" id="tabC" style="display:none;">
+					{comment[5]}
+				</ul>
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+
+		</div><!-- right -->
+
+		<div class="iType">
+
+			<ul class="typeNav">
+				<li><a name="iTabType" target="iType1" onclick="return changeTab(this);" class="selected">{columnSingle[16,1]}</a></li>
+				<li><a name="iTabType" target="iType2" onclick="return changeTab(this);">{columnSingle[17,1]}</a></li>
+				<li><a name="iTabType" target="iType3" onclick="return changeTab(this);">{columnSingle[7,1]}</a></li>
+				<li><a name="iTabType" target="iType4" onclick="return changeTab(this);">{columnSingle[19,1]}</a></li>
+				<li><a name="iTabType" target="iType5" onclick="return changeTab(this);">{columnSingle[20,1]}</a></li>
+				<li><a name="iTabType" target="iType6" onclick="return changeTab(this);">{columnSingle[21,1]}</a></li>
+				<li><a name="iTabType" target="iType7" onclick="return changeTab(this);">{columnSingle[27,1]}</a></li>
+			</ul>
+
+			<div class="typeBox">
+				<div class="ft"></div>
+				<div class="fm">
+					<ul class="typeList" id="iType1">
+						{articleList[16,8,30,1,1,3]}<!-- 取22个字符才能完整显示最新、热门、置顶这三个标签 -->
+					</ul>
+					<ul class="typeList" id="iType2" style="display:none;">
+						{articleList[17,8,22,1,1,3]}
+					</ul>
+					<ul class="typeList" id="iType3" style="display:none;">
+						{articleList[7,8,22,1,1,3]}
+					</ul>
+					<ul class="typeList" id="iType4" style="display:none;">
+						{articleList[19,8,22,1,1,3]}
+					</ul>
+					<ul class="typeList" id="iType5" style="display:none;">
+						{articleList[20,8,22,1,1,3]}
+					</ul>
+					<ul class="typeList" id="iType6" style="display:none;">
+						{articleList[21,8,22,1,1,3]}
+					</ul>
+					<ul class="typeList" id="iType7" style="display:none;">
+						{articleList[27,8,22,1,1,3]}
+					</ul>
+				</div>
+				<div class="fe"><div class="fel"></div></div>
+			</div>
+
+		</div><!-- iType -->
+
+
+		<div class="iGuge">
+			<div class="ft"><div class="ftl"></div></div>
+			<div class="fm">
+				{adCode[1]}
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+		</div>
+
+
+		<div class="link">
+
+			<h2>文字链接</h2>
+			<div class="linkTxt">
+				{friendly[19,0]}
+			</div>
+			<h2>图片链接</h2>
+			<div class="linkImg">
+				{friendly[20,1]}
+			</div>
+		</div>
+
+
+<div class="notice" id="notice" style="display:none;">
+	<h2>
+		<span>Notice</span>
+		<cite>公告</cite>
+		<em id="timeout"></em>
+		<i onclick="show('showNotice','notice');">Close X</i>
+	</h2>
+	<div class="noticeBox">
+		{notice}
+		<p><input type="button" class="button" value="关闭" onclick="show('showNotice','notice');" /></p>
+	</div>
+</div>
+<div id="showNotice" onclick="show('notice','showNotice');"></div>
+<script type="text/javascript">
+function getId(idName){
+	return document.getElementById(idName);
+}
+function show(showId,hideId) {
+	getId(showId).style.display='';
+	getId(hideId).style.display='none';
+}
+</script>
