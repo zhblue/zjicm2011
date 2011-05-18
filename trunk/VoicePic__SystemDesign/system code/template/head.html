@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ych" />
+<meta name="description" content="{description}" />
+<meta name="keywords" content="{keywords}" />
+<title>{title}</title>
+<link href="{tcmsDir}css/dafi.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{tcmsDir}script/tabbed.js"></script>
+<style type="text/css">
+<!--
+#selected{sNumber} #m{sNumber}{color:#f33;font-weight:bold;background:url({tcmsDir}css/img/bg.gif) -260px -40px no-repeat;}
+-->
+</style>
+</head>
+<body id="selected{sNumber}"><!-- 此标签的作用是让导航处于选中当前页面状态 -->
+<div class="wrap">
+
+
+
+	<div class="head">
+
+		<div class="hText">
+			<a href="{webUrl}">Home</a> | 
+			<a href="{webUrl}" target="_blank">About</a> | 
+			<a href="javascript:window.external.addfavorite('{webUrl}','{webName}');">Favicon</a>
+		</div><!-- head -->
+		<div class="hSearch">
+			<form action="{tcmsDir}search.php" method="post" onsubmit="return hSearch(this);">
+				<input type="text" name="keyWord" id="keyWord" maxlength="20" value="搜索：请输入2个以上字符" onclick="if(this.value=='搜索：请输入2个以上字符'){this.value='';}" />
+				<input type="submit" class="button" value="" />
+			</form>
+		</div><!-- hSearch -->
+		
+		<div class="hLogo">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0">
+			<param name="movie" value="{tcmsDir}images/header.swf" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="transparent"/>
+			<embed src="{tcmsDir}images/header.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="890px" height="300px"></embed>
+			</object>
+			
+			<!--<img src="{tcmsDir}images/head-logo.gif" alt="{webName}" />-->
+		</div><!-- hLogo -->
+
+
+
+		<div class="hNav">
+			<ul>
+				{columnList}
+			</ul>
+		</div>
+
+	</div><!-- head -->
+
+	<div class="main">

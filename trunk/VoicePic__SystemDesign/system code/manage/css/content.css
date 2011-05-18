@@ -1,0 +1,582 @@
+@charset "utf-8";
+* {margin:0;padding:0;border:0;list-style:none;}
+body {
+	font: 12px arial, sans-serif;
+	color: #333;
+	padding: 10px 10px 10px 5px;
+}
+input, select, textarea {
+	font: 12px Arial, sans-serif;
+	line-height: 16px;
+}
+.clear,
+.space,
+.line {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+.space {
+	height: 20px;
+}
+.line {
+	height: 1px;
+	margin: 5px 0;
+	background: #ccc;
+}
+#content {
+	width: 100%px;
+}
+.contentIn {
+	min-height: 400px;
+	-height: 400px;
+	padding: 10px;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+u.b1, u.b2, u.b3 {
+	clear: both;
+	display: block;
+	height: 1px;
+	background: #fff;
+	overflow: hidden;
+}
+u.b1 {
+	margin: 0 3px;
+	background: #ccc;
+}
+u.b2,
+u.b3 {
+	height: 1px;
+	margin: 0 1px;
+	border-right: 2px solid #ccc;
+	border-left: 2px solid #ccc;
+}
+u.b3 {
+	border-width: 1px;
+}
+
+.contentIn h2 {
+	clear: both;
+	font: bold 15px "微软雅黑", Arial, sans-serif;
+	height: 25px;
+	padding: 0 2px 2px;
+	margin-bottom: 5px;
+	border-bottom: 1px dashed #ccc;
+}
+.contentIn h3 {
+	clear: both;
+	font: bold 13px/30px "微软雅黑", Arial, sans-serif;
+	padding-left: 5px;
+}
+.contentIn h3 form {
+	height: 35px;
+	padding-top: 3px;
+}
+.contentIn h3 input {
+	width: 200px;
+	height: 23px;
+	font: bold 13px/23px "微软雅黑", Arial, sans-serif;
+	padding: 0 3px;
+	border: 1px solid #ccc;
+}
+.contentIn h3 input.num {
+	width: 22px;
+	text-align: center;
+}
+.contentIn h3 input.but {
+	width: 40px;
+	height: 25px;
+	background: #ddd;
+}
+.contentIn h3 a {
+	font-size: 12px;
+	font-weight: normal;
+}
+.contentIn h4 {
+	clear: both;
+	font: bold 12px/30px "微软雅黑", Arial, sans-serif;
+	padding-left: 5px;
+	color: #e33;
+}
+.contentIn h4 a {
+	color: #e33;
+}
+.contentIn p {
+	line-height: 200%;
+}
+.contentIn a {
+	color: #333;
+	text-decoration: underline;
+}
+.contentIn strong {
+	color: #333;
+	margin: 0 3px;
+}
+
+ul.default {
+	padding: 0 0 10px;
+	font: 12px/25px "微软雅黑", Arial, sans-serif;
+}
+ul.default li {
+	padding-left: 15px;
+}
+
+.inBox,
+.inEnd {
+	clear: both;
+	padding: 10px 0 0;
+	zoom: 1;
+}
+.inBox label {
+	display: block;
+	float: left;
+	width: 100px;
+	line-height: 28px;
+	text-align: right;
+}
+.inBox label.r {
+	display: inline;
+	float: none;
+	width: auto;
+	text-align: left;
+	margin-right: 5px;
+}
+.inBox input.textA,
+.inBox input.textB,
+.inBox input.textC,
+.inBox input.textD,
+.inBox textarea {
+	float: left;
+	width: 300px;
+	height: 20px;
+	line-height: 20px;
+	padding: 2px;
+	border: 1px solid #ccc;
+	color: #333;
+}
+.inBox input.textB {
+	width: 200px;
+}
+.inBox input.textC {
+	width: 100px;
+}
+.inBox select {
+	height: 22px;
+	padding: 1px;
+	border: 2px solid #ddd;
+	position: relative;
+	left: -5px;
+	*top: 2px
+}
+.inBox .textareaBox {
+	border: 1px solid #ddd;
+	position: relative;
+	margin-right: -100px;
+}
+.textareaBoxIn {
+	margin-right: 100px;
+	background: #f00;
+}
+.inBox textarea {
+	width: 600px;
+	height: 400px;
+	overflow: auto;
+	border: none;
+}
+.inBoxTxt {
+	float: left;
+	line-height: 26px;
+	padding: 0 5px;
+}
+.inBoxTxt cite {
+	font-style: normal;
+	color: #c00;
+}
+.inBoxTxt input {
+	*position: relative;
+	top: 2px;
+}
+.inBoxTxt label {
+	display: inline;
+	float: none;
+	width: auto;
+}
+.inEnd {
+	height: 30px;
+	padding: 15px 0 0 100px;
+}
+.inEnd input {
+	width: 80px;
+	height: 30px;
+	background: url(images/content.gif) no-repeat;
+	color: #555;
+	letter-spacing: 1em;
+	margin: 0 10px 0 0;
+	font-weight: bold;
+}
+.inBox input.but1 {
+	width: 80px;
+	height: 26px;
+	margin-left: 5px;
+	background: #ddd;
+	border: 1px solid #eee;
+	border-right-color: #666;
+	border-bottom-color: #666;
+}
+
+
+.slideList {
+	display: inline-block;
+	float: left;
+	width: 225px;
+	height: 140px;
+	border: 1px solid #999;
+	margin: 10px 10px 0 3px;
+	overflow: hidden;
+}
+.slideL {
+	float: left;
+	width: 101px;
+	padding: 7px;
+}
+.slideL img {
+	width: 95px;
+	height: 120px;
+	padding: 2px;
+	border: 1px solid #ccc;
+}
+.slideR {
+	float: left;
+	width: 110px;
+	line-height: 15px;
+	padding-top: 5px;
+}
+.slideR input {
+	width: 100px;
+	height: 16px;
+	line-height: 16px;
+	border: 1px solid #ccc;
+	color: #333;
+}
+.slideR input.sort {
+	width: 30px;
+}
+.slideR input.but {
+	width: auto;
+	background: none;
+	border: none;
+	color: #333;
+	text-decoration: underline;
+	position: relative;
+	top: 1px;
+	margin-right: 5px;
+}
+.newSlide {
+	clear: both;
+}
+.newSlide input {
+	width: 200px;
+	height: 15px;
+	padding: 1px;
+	border: 1px solid #ccc;
+}
+.newSlide input.sort {
+	width: 30px;
+}
+.newSlide input.but,
+.customList input.but {
+	width: auto;
+	height: 19px;
+	background: #ddd;
+	border: 1px solid #eee;
+	border-right-color: #666;
+	border-bottom-color: #666;
+}
+
+.customList {
+	display: inline-block;
+	float: left;
+	margin: 5px 0 0 5px;
+}
+.customList textarea {
+	width: 95%;
+	height: 50px;
+	margin: 0 0 5px;
+	border: 1px solid #666;
+	border-right-color: #ccc;
+	border-bottom-color: #ccc;
+	overflow: auto;
+	overflow-x: hidden;
+}
+.Ad {
+	width: 32%;
+}
+.Ad textarea {
+	height: 120px;
+}
+.Custom input {
+	width: 100px;
+	border: 1px solid #ccc;
+	height: 15px;
+	padding: 1px;
+	margin: 5px 5px 5px 0;
+	vertical-align: middle;
+}
+.Custom,
+.Notice {
+	clear: both;
+	padding-bottom: 5px;
+}
+
+
+ul.type {
+	clear: both;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+}
+ul.typeTitle {
+	height: 25px;
+	line-height: 25px;
+	background: #ddd;
+	font-weight: bold;
+}
+ul.even {
+	background: #eee;
+}
+p.end {
+	clear: both;
+	border-top: 1px solid #999;
+	text-align: right;
+	color: #f00;
+}
+ul.type li {
+	display: inline-block;
+	float: left;
+	width: 14%;
+	margin-left: 1%;
+	padding-top: 3px;
+}
+ul.type li.sort,
+ul.type li.sort2 {
+	width: 9%;
+}
+ul.type li.sort input {
+	width: 30px;
+}
+ul.type li.sort2 input {
+	width: 95%;
+}
+ul.type li.short {
+	width: 8%;
+	text-align: center;
+}
+ul.type li input {
+	width: 90%;
+	height: 18px;
+	border: 1px solid #ccc;
+}
+ul.type li select {
+	width: 90%;
+}
+ul.type li.short input {
+	width: auto;
+	background: #ddd;
+}
+ul.type li.short a {
+	color: #e33;
+}
+
+
+ul.linkList {
+	clear: both;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+}
+ul.linkTitle {
+	font-weight: bold;
+}
+ul.linkList li {
+	display: inline-block;
+	float: left;
+	width: 18%;
+	margin-left: 1%;
+	-padding-top: 4px;
+}
+ul.linkList li input {
+	width: 90%;
+	height: 18px;
+	border: 1px solid #ccc;
+}
+ul.linkList li.l1 {
+	width: 3%;
+}
+ul.linkList li.l2 {
+	width: 9%;
+}
+ul.linkList li.l3,
+ul.linkList li.l4 {
+	width: 5%;
+	-width: 4%;
+}
+ul.linkList li.l3 a {
+	color: #e33;
+}
+ul.linkList li.l4 input {
+	width: auto;
+	background: #ddd;
+}
+
+.aNav {
+	clear: both;
+	font: 12px/20px Tahoma, sans-serif;
+	margin: 5px 0;
+	padding: 0 0 5px;
+	border-bottom: 1px solid #333;
+}
+.aNav a {
+	margin: 0 3px;
+	color: #666;
+	background: #fff;
+	text-decoration: none;
+	-overflow: hidden;
+}
+.aNav a.selected {
+	color: #333;
+	font-weight: bold;
+}
+ul.aList {
+	clear: both;
+	height: 30px;
+	line-height: 30px;
+}
+ul.aTitle {
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+ul.aList li {
+	display: inline-block;
+	float: left;
+	width: 9%;
+	margin-left: 1%;
+	-padding-top: 5px;
+}
+ul.aList li.l1 {
+	width: 4%;
+}
+ul.aList li.l2 {
+	width: 10%;
+}
+ul.aList li.del {
+	-width: 5%;
+}
+ul.aList li.del a {
+	color: #e33;
+}
+ul.aList li input {
+	width: 90%;
+	height: 18px;
+	border: 1px solid #ccc;
+}
+ul.aList li input.atop {
+	width: auto;
+	vertical-align: middle;
+	*position: relative;
+	*top: 3px;
+}
+ul.aList li input.but {
+	width: auto;
+	background: #ddd;
+}
+
+.page {
+	margin: 5px 0 0;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	font-size: 12px;
+}
+.page a {
+	margin: 0 3px;
+	color: #333;
+	text-decoration: underline;
+}
+.page strong {
+	margin: 0 3px;
+	color: #e33;
+}
+
+
+.leaveList {
+	line-height: 20px;
+	border-bottom: 2px solid #ccc;
+	padding: 5px 0;
+}
+.leaveG {
+	float: left;
+	width: 60%;
+	padding-left: 5px;
+}
+.leaveG span {
+	font-size: 10px;
+	font-family: Arial, sans-serif;
+}
+.leaveS {
+	float: right;
+	width: 30%;
+	padding-right: 5px;
+	text-align: right;
+}
+.leaveS a.verify {
+	color:#e33;
+}
+.leaveS strong {
+	color:#e33;
+	font-size: 13px;
+}
+.leaveG input,
+.leaveS input {
+	width: 100px;
+	height: 18px;
+	line-height: 18px;
+	border: 1px solid #ccc;
+}
+.leaveG input.short {
+	width: 20px;
+}
+.leaveC {
+	clear: both;
+	padding: 5px;
+}
+.leaveC textarea {
+	width: 98%;
+	height: 50px;
+	padding: 4px;
+	border: 1px solid #666;
+	border-right-color: #ccc;
+	border-bottom-color: #ccc;
+	overflow: auto;
+}
+.leaveC input {
+	width: 50px;
+	height: 20px;
+	background: #ddd;
+	border: 1px solid #999;
+	margin-top: 4px;
+}
+.leaveRe {
+	border: 1px solid #ccc;
+	margin-bottom: 5px;
+}
+
+
+
+.contentIn iframe.makeFrame {
+	width: 200px;
+	height: 450px;
+	border: none;
+}

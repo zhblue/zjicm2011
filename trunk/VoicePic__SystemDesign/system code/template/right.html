@@ -1,0 +1,47 @@
+		<div class="right">
+
+			{custom}
+
+			<ul class="tabA tabB">
+				<li class="tabMenuL">
+					<a name="iArticle" target="iTabC" onmouseover="return changeTab(this);" class="selected">最新文章</a>
+				</li>
+				<li class="tabMenuM">
+					<a name="iArticle" target="iTabD" onmouseover="return changeTab(this);">热门文章</a>
+				</li>
+				<li class="tabMenuR">
+					<a name="iArticle" target="iTabE" onmouseover="return changeTab(this);">置顶文章</a>
+				</li>
+			</ul>
+			<div class="fm">
+				<ul class="iArticle" id="iTabC">
+					{articleList[0,8,20,0,0,1]}
+				</ul>
+				<ul class="iArticle" id="iTabD" style="display:none;">
+					{articleList[0,8,20,0,0,2]}
+				</ul>
+				<ul class="iArticle" id="iTabE" style="display:none;">
+					{articleList[0,8,20,0,0,3]}
+				</ul>
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+
+			<ul class="tabA">
+				<li class="tabMenuL">
+					<a name="userTab" target="tabL" onmouseover="return changeTab(this);" href="{tcmsDir}leave.php" class="selected">最新留言</a>
+				</li>
+				<li class="tabMenuR">
+					<a name="userTab" target="tabC" onmouseover="return changeTab(this);" href="{tcmsDir}comment.php">最近评论</a>
+				</li>
+			</ul>
+			<div class="fm iLeave">
+				<ul class="newLeave" id="tabL">
+					{leave[5]}
+				</ul>
+				<ul class="newLeave" id="tabC" style="display:none;">
+					{comment[5]}
+				</ul>
+			</div>
+			<div class="fe"><div class="fel"></div></div>
+
+		</div><!-- right -->
